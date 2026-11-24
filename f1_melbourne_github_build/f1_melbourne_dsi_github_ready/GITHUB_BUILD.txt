@@ -1,0 +1,22 @@
+GITHUB ACTIONS – SIMPLE STEPS
+
+This ZIP is a replacement project bundle containing a corrected Makefile and
+an automatic GitHub Actions workflow.
+
+1. Extract this ZIP on Windows.
+2. Open your existing repository on GitHub.
+3. Use Add file -> Upload files.
+4. Upload all files and folders from the extracted project, including the
+   hidden .github folder. If Windows hides it, turn on View -> Show -> Hidden items.
+5. If GitHub asks whether to replace files, confirm. Commit to main.
+6. Open Actions. The workflow should be named "Build Nintendo DS ROM".
+7. Wait for the build. If it succeeds, open the run and download the
+   "f1-melbourne-dsi" artifact.
+
+If GitHub's web uploader does not preserve .github, create the directory and
+workflow file in the GitHub editor manually using the exact path:
+.github/workflows/build-nds.yml
+
+The workflow is configured to build the DS-compatible NDS file. It has not
+been verified on the user's DSi; the first Actions run is the actual compiler
+check and may expose further errors.
