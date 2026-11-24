@@ -13,10 +13,10 @@ SOURCES := source
 INCLUDES :=
 
 ARCH := -marm
-CFLAGS := -g -Wall -Wextra -O2 -ffunction-sections -fdata-sections $(ARCH) -marm -DARM9
+CFLAGS := -g -Wall -Wextra -O2 -ffunction-sections -fdata-sections $(ARCH) -DARM9
 CXXFLAGS := $(CFLAGS) -fno-rtti -fno-exceptions
 ASFLAGS := -g $(ARCH)
-LDFLAGS = -specs=ds_arm9.specs -g $(ARCH) -Wl,-Map,$(notdir $*.map)
+LDFLAGS = -specs=ds_arm9.specs -g -Wl,-Map,$(notdir $*.map)
 LIBS := -lnds9 -lm
 LIBDIRS := $(LIBNDS) $(PORTLIBS)
 
