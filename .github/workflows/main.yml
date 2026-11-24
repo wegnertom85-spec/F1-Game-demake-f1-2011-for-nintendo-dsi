@@ -14,6 +14,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Install Nintendo DS libraries
+        run: dkp-pacman -Sy --noconfirm libnds
+
       - name: Compile game
         run: make
         working-directory: f1_melbourne_github_build/f1_melbourne_dsi_github_ready
