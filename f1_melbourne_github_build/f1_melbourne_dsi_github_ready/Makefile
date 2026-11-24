@@ -1,4 +1,4 @@
-# Nintendo DS / DSi homebrew Makefile (devkitPro devkitARM)
+# Nintendo DS / DSi homebrew Makefile
 .SUFFIXES:
 
 ifeq ($(strip $(DEVKITARM)),)
@@ -16,7 +16,7 @@ ARCH := -marm
 CFLAGS := -g -Wall -Wextra -O2 -ffunction-sections -fdata-sections $(ARCH) -DARM9
 CXXFLAGS := $(CFLAGS) -fno-rtti -fno-exceptions
 ASFLAGS := -g $(ARCH)
-LDFLAGS = -specs=ds_arm9.specs -g -Wl,-Map,$(notdir $*.map)
+LDFLAGS = -g
 LIBS := -lnds9 -lm
 LIBDIRS := $(LIBNDS) $(PORTLIBS)
 
