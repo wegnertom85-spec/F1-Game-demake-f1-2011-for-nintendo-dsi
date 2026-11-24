@@ -12,7 +12,7 @@ BUILD := build
 SOURCES := source
 INCLUDES :=
 
-ARCH := -march=armv5te -mtune=arm946e-s
+ARCH := -mthumb -mthumb-interwork
 CFLAGS := -g -Wall -Wextra -O2 -ffunction-sections -fdata-sections $(ARCH) -marm -DARM9
 CXXFLAGS := $(CFLAGS) -fno-rtti -fno-exceptions
 ASFLAGS := -g $(ARCH)
