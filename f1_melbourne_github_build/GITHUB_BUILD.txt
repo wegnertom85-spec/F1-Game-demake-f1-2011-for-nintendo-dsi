@@ -1,0 +1,16 @@
+ONLINE BUILD (GitHub Actions)
+
+1. Create a NEW PUBLIC repository on GitHub named f1-melbourne-dsi.
+2. Extract this ZIP on your PC.
+3. On the repository page choose Add file -> Upload files.
+4. Upload the CONTENTS of this folder, including the .github folder.
+   If the browser does not show .github, enable hidden items in File Explorer.
+5. Commit the files to the main branch.
+6. Open the Actions tab. Select "Build Nintendo DS ROM".
+7. Click "Run workflow" if it has not started automatically.
+8. Open the completed workflow run and download the artifact named
+   "f1-melbourne-dsi". It contains the .nds file if the build succeeds.
+
+The repository must be public for the simplest free GitHub Actions setup.
+Do not upload personal information or copyrighted game assets.
+This workflow builds source code; it does not guarantee the prototype compiles.
