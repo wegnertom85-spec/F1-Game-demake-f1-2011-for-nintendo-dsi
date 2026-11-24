@@ -12,7 +12,7 @@ BUILD := build
 SOURCES := source
 INCLUDES :=
 
-ARCH := -mthumb -mthumb-interwork
+ARCH := -marm
 CFLAGS := -g -Wall -Wextra -O2 -ffunction-sections -fdata-sections $(ARCH) -marm -DARM9
 CXXFLAGS := $(CFLAGS) -fno-rtti -fno-exceptions
 ASFLAGS := -g $(ARCH)
