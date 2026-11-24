@@ -1,1 +1,27 @@
 
+name: Build Nintendo DS Game
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container:
+      image: devkitpro/devkitarm:latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Compile game
+        run: make
+        working-directory: f1_melbourne_github_build
+
+      - name: Save NDS file
+        uses: actions/upload-artifact@v4
+        with:
+          name: F1-Melbourne-DSi
+          path: f1_melbourne_github_build/f1_melbourne_dsi.nds
+          if-no-files-found: error
